@@ -42,9 +42,10 @@ function makeTimer() {
     refs.startBtn.disabled = true;
     if (ms <= 0) {
       ms = 0;
-      clearInterval(timerId);
+      
       refs.inputDatetime.disabled = false;
       refs.startBtn.disabled = true;
+      clearInterval(timerId);
     }
     convertMs(ms);
   });
