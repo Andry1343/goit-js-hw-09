@@ -5,6 +5,7 @@ import Notiflix from 'notiflix';
 let date = new Date();
 let selectedTime = '';
 let ms = 0;
+let timerId = null;
 
 const refs = {
   inputDatetime: document.querySelector('#datetime-picker'),
@@ -41,8 +42,7 @@ function makeTimer() {
     refs.inputDatetime.disabled = true;
     refs.startBtn.disabled = true;
     if (ms <= 0) {
-      ms = 0;
-      
+      ms = 0;  
       refs.inputDatetime.disabled = false;
       refs.startBtn.disabled = true;
       clearInterval(timerId);
