@@ -10,14 +10,6 @@ const refs = {
   inputDatetime: document.querySelector('#datetime-picker'),
   startBtn: document.querySelector('button'),
   values: document.querySelectorAll('.value'),
-
-
-  //label: document.querySelectorAll('.label')
-
-  /* days: document.querySelector('[data-days]'),
-  hours: document.querySelector('[data-hours]'),
-  minutes: document.querySelector('[data-minutes]'),
-  seconds: document.querySelector('[data-seconds]'), */
 };
 
 refs.startBtn.setAttribute('disabled', true);
@@ -55,7 +47,6 @@ function makeTimer() {
       refs.startBtn.disabled = true;
     }
     convertMs(ms);
-    console.log(ms);
   });
 }
 
